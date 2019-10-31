@@ -11,9 +11,11 @@ var main = {
         if ($(".navbar").offset().top > 50) {
             $(".navbar").addClass("top-nav-short");
             $(".navbar-custom .avatar-container").fadeOut(500);
+            $(".navbar-custom .navbar-brand").fadeIn(500);
         } else {
             $(".navbar").removeClass("top-nav-short");
             $(".navbar-custom .avatar-container").fadeIn(500);
+            $(".navbar-custom .navbar-brand").fadeOut(500);
         }
     });
 
