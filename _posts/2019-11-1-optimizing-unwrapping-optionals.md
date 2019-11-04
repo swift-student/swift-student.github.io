@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Optimizing Optional Unwrapping
-subtitle: Quick Tips
-tags: [test]
+subtitle:
+tags: [quick tips, coding style]
 comments: true
 ---
 
@@ -31,7 +31,7 @@ This works fine, however I found a couple issues with this method as I went alon
 ``` swift
 func printIntroduction() {
     if let unwrappedName = name, let unwrappedAge = age {
-            print("Hi, my name is \(unwrappedName) and I am \(unwrappedAge) years old.")
+    	print("Hi, my name is \(unwrappedName) and I am \(unwrappedAge) years old.")
     }
 }
 ```
@@ -41,7 +41,7 @@ Next up, I struggled for a long time deciding what to name my unwrapped optional
 ``` swift
 func printIntroduction() {
     if let name = name, let age = age {
-            print("Hi, my name is \(name) and I am \(age) years old.")
+    	print("Hi, my name is \(name) and I am \(age) years old.")
     }
 }
 ```

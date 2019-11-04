@@ -2,7 +2,7 @@
 layout: post
 title: A New Adventure
 subtitle: Making a Career Change at 30
-tags: [test]
+tags:
 comments: true
 ---
 <style type="text/css">
@@ -20,10 +20,12 @@ comments: true
     font-style: italic;
 }
 </style>
+![trail](/img/trail.jpg)
+
 Since I was a young kid, I have always been heavily into computers and technology. Yet somehow the circumstances of life led me to a career in woodworking throughout most of my 20s. I did try to learn to develop for iOS shortly after the iPad came out, and actually made it through a couple of Stanford courses on iTunes U, before embarking on trying to create my own app. However I had bitten off more than I could chew, and after a couple weeks of working on that app, I got frustrated, and ended up back in the woodshop.
 
 <figure class = "image-left">
-<img src="/img/shawn-genna.jpg" alt="my alt text"/>
+<img src="/img/shawn-genna.jpg" alt="Shawn and Genna"/>
   <figcaption>My wife, Genna and I.</figcaption>
 </figure>
 
