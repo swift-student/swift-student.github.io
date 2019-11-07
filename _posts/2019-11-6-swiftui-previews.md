@@ -2,7 +2,7 @@
 layout: post
 title: Use SwiftUI Previews with any UIView!
 subtitle:
-tags: [quick tips, coding style]
+tags: [quick tips, SwiftUI]
 comments: true
 ---
 
