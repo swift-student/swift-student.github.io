@@ -1,4 +1,4 @@
-.highlight  { color: #DFDFE0; background: #292A30; }
+.highlight  { color: #DFDFE0; background: #292A30; font-size: 80% }
 .highlight .k { font-weight: bold; color: #FF7AB2 } /* Keyword */
 .highlight .kt { color: #DABAFF } /* Keyword.Type */
 .highlight .kd { color: #FF7AB2; font-weight: bold } /* Keyword.Declaration */
