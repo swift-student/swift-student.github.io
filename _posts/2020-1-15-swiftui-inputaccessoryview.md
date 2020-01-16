@@ -85,7 +85,7 @@ Notice that I've made the text a Binding\<String\>. This means that the SSTextFi
 
 ```
 
-This is very similar to the function SwiftUI uses for it's modifier, only it takes a UIFont vs. a Font. Later, we will update our UITextField in the updateUIView method. You can follow this same pattern to modify other aspects of your text field. Let's go ahead and add a variable for an InputAccessoryViewController, which we will be passing in, and a "modifier" to match. The modifier will take the controller as well as a tag which will let us know which order the text fields on our screen are in. This will bring our code up to the following:
+This is very similar to the function SwiftUI uses for it's modifier, only it takes a UIFont vs. a Font. Later, we will update our UITextField in the updateUIView method. You can follow this same pattern to modify other aspects of your text field. Let's go ahead and add a variable for an accessory view controller, which we will be passing in, and a "modifier" to match. The modifier will take the controller as well as a tag which will let us know which order the text fields on our screen are in. This will bring our code up to the following:
 
 ```swift
 struct SSTextField: UIViewRepresentable {
@@ -186,7 +186,7 @@ So the basic structure of this view is pretty simple. It consists of a horizonta
 
 Of note is the way I track the text fields managed by this accessory view. I sort the array that they are stored in according to the tag. Then when advancing to the next text field or going back to the previous one, I use the index of the current view controller (finding it using it's tag), and add or subtract one to find the correct index. 
 
-Doing it this way versus just going up or down using the tag allows for adding or removing text fields in our UI. Doing it this way, it doesn't matter if our tags are 1, 2, 3, or 1, 3, 5, it will still work properly.
+Doing it this way versus just going up or down using the tag allows for adding or removing text fields in our UI. It doesn't matter if our tags are 1, 2, 3, or 1, 3, 5, it will still work properly.
 
 The controller looks like this:
 
@@ -346,4 +346,4 @@ Here you can see our "modifiers" at work. In addition to a font, I pass in our a
 
 ![](/img/2020-1-15-swiftui-inputaccessoryview/input-accessory-test.png)
 
-If you have any suggestions on improvements to this code, feel free to let me know! I am still just learning SwiftUI and app development in general, and this is by no means written from an expert point of view.
+If you have any suggestions on improvements to this code, feel free to let me know! I am still just learning SwiftUI and app development in general, and this is by no means written from an expert point of view. In the coming weeks, I will share some other tips I have picked up along the way. SwiftUI is neat, but still has a long way to go both in features, and documentation. I can definitely see the advantages though, and will continue trying to learn it through building a budget app.
