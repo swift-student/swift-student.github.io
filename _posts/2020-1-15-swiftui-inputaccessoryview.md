@@ -8,9 +8,9 @@ comments: true
 typora-root-url: ../../swift-student.github.io
 ---
 
-Between moving into a new apartment, my wife getting a new job, trying to get my last few projects finished at my job, and the holidays, life has got in the way of me keeping up on blogging for a bit. However, I've tried to keep working on my budget app where I can, and though I haven't made a ton of progress on the app, I have learned quite a bit about SwiftUI. See, I decided since this a personal project and I'm not too worried about supporting older versions of iOS, I would try my hand at using SwiftUI. 
+Between moving into a new apartment, my wife getting a new job, trying to get my last few projects finished at my job, and the holidays, life has got in the way of me keeping up on blogging for a bit. However, I've tried to keep working on my budget app where I can, and though I haven't made a ton of progress on the app, I have learned quite a bit about SwiftUI. See, I decided since this is a personal project and I'm not too worried about supporting older versions of iOS, I would try my hand at using SwiftUI. 
 
-In some ways, SwiftUI can speed up development, and lead to writing less code. However, when you need a feature that isn't provided yet, or run into a bug, you can spend hours or even days trying to solve your problem. At this point, I'm quite positive that I could re-create what I have so far in UIKit in a matter of hours, and I have been tempted multiple times to abandon ship and go back to UIKit. However, I've stuck it out with SwiftUI, and I have a few tidbits that I will try to share in hopes that they might help others.
+In some ways, SwiftUI can speed up development, and lead to writing less code. However, when you need a feature that isn't provided yet, or run into a bug, you can spend hours or even days trying to solve your problem. At this point, I'm quite positive that I could re-create what I have so far in a matter of hours using UIKit, and I have been tempted multiple times to abandon ship and go back to it. However, I've stuck it out with SwiftUI, and I have a few tidbits that I will try to share in hopes that they might help others.
 
 In creating my app, I wanted to have an InputAccessoryView on my textfields that allowed navigation between and dismissal of TextFields similar to that of Safari when filling out a form:
 
