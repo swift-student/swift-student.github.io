@@ -6,7 +6,6 @@ tags:
 comments: true
 
 typora-root-url: ../../swift-student.github.io
-
 ---
 
 I have officially completed my first week with Lambda School, and at this point I am super excited for my career as an iOS developer. Being able to dedicate over 40 hours a week to learning, combined with the collaborative environment of Lambda will really accelerate my progress. I feel like in 9 months I will be more than ready to take on a developer position.
@@ -156,4 +155,6 @@ Overall, I feel really good about my first week at Lambda. I learned so much mor
 - Workflow tips, shortcuts, and so much more!
 
 If you are considering joining Lambda, based on my first week's experience, I highly recommend it! You will learn so much in a structured course like this. I'm looking forward to the next 9 months of my journey.
+
+
 
