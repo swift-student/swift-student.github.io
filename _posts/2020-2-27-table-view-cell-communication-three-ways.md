@@ -10,6 +10,12 @@ typora-root-url: ../../swift-student.github.io
 
 So you have a custom table view cell with a control in it. For example, let's say that your cell has a checkmark button. When the user interacts with this button, how do you let your view controller know? Let's go over three different ways you could accomplish this task, depending on your scenario and preferences.
 
+
+
+------
+
+
+
 # Delegation
 
 Delegation is one the main communication patterns that we see throughout Apple's frameworks, and for good reason. By using a protocol to define responsibilities for the delegate to handle, the delegator can be clear about it's intentions. It also allows for easily adding methods to the protocol, say for example we were to add additional buttons to our cell. 
@@ -74,6 +80,12 @@ extension TableViewController: CustomTableViewCellDelegate {
 
 
 
+
+
+------
+
+
+
 # Target-Action
 
 When I happened upon [example code](https://developer.apple.com/library/archive/samplecode/Accessory/Listings/AccessoryViewController_m.html#//apple_ref/doc/uid/DTS40008066-AccessoryViewController_m-DontLinkElementID_4) for a table view cell with a custom accessory view from Apple, this is the pattern that they used, albeit in 2014. Before seeing this example, it hadn't dawned on me that interface builder actions could be made directly from a table view cell to a view controller. But then how do you figure out which cell is calling that action? Good question. Luckily table views have a method for determining the cell for a specific CGPoint, which we can get by including the event in the parameters of our IBAction. Here's how the code would look in swift:
@@ -89,6 +101,12 @@ When I happened upon [example code](https://developer.apple.com/library/archive/
 ```
 
 As a note, in the example of a checkmark button, the cell would still be responsible for updating the checkmark image through an IBAction in the cell itself. However, with a normal button, the IBAction in the view controller would be all that's needed.
+
+
+
+------
+
+
 
 # Closure
 
