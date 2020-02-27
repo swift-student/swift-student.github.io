@@ -5,7 +5,6 @@ subtitle:
 tags:
 comments: true
 
-typora-root-url: ../../swift-student.github.io
 ---
 
 So you have a custom table view cell with a control in it. For example, let's say that your cell has a checkmark button. When the user interacts with this button, how do you let your view controller know? Let's go over three different ways you could accomplish this task, depending on your scenario and preferences.
