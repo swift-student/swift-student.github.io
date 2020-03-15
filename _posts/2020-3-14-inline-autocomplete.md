@@ -35,9 +35,7 @@ This is a little project I worked on this weekend, trying to replicate the inlin
 
   
 
-  
-
-  So to start with, I configured my search bar like so:
+As a note, I am using Swift 5 and targeting iOS13 in the following code. So to start with, I configured my search bar like so:
 
   ```swift
   private func setupSearchBar() {
