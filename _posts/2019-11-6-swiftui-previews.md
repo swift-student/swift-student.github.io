@@ -15,15 +15,15 @@ The first step to get this up and running is to wrap your UIView in a SwiftUI Vi
 ```swift
 struct ViewWrapper: UIViewRepresentable {
     func makeUIView(context: UIViewRepresentableContext<ViewWrapper>) -> UIView {
-        return ViewController().view
+    return <#YourVC#>().view
     }
 ```
 
-However if you are using storyboards, and assuming your storyboard is titled "Main" and the view controller you would like to use has an identifier "ViewController", you can find your view like so:
+However if you are using storyboards, you can get your view like so:
 ```swift
 struct ViewWrapper: UIViewRepresentable {
     func makeUIView(context: UIViewRepresentableContext<ViewWrapper>) -> UIView {
-    return UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(identifier: "<#YourVCIdentifierHere#>").view
+    return UIStoryboard(name: "<#StoryBoardName#>", bundle: Bundle.main).instantiateViewController(identifier: "<#YourVCIdentifier#>").view
     }
 ```
 
