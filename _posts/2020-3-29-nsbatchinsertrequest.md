@@ -26,7 +26,7 @@ There are a couple of ways to deal with this issue, including batching as demons
 
 
 
-With all of those limitations in mind, let's jump in to an example of how to use this new api. To start with, I am again using Swift 5 and targeting iOS13. I have set up a simple Firebase realtime database to sync a simple movie watch list app with. 
+With all of those limitations in mind, let's jump in to an example of how to use this new feature. To start with, I am again using Swift 5 and targeting iOS13. I have set up a simple Firebase realtime database to sync a simple movie watch list app with. 
 
 If you are fetching objects from your API that may or may not have counterparts in Core Data, you need to have some way to make sure that you don't create duplicate entries. Thankfully, Core Data has a solution, in the form of Core Data Constraints. Constraints allow you to define one or more attributes that must be unique for each entity in your model. In my case I added the identifier attribute in the model editor. 
 
