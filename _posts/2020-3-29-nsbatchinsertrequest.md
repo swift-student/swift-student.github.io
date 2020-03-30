@@ -34,7 +34,7 @@ If you are fetching objects from your API that may or may not have counterparts 
 
 Keep in mind that this solution works equally well whether you are using NSBatchInsertRequest or just using Codable, but there is one step later on that you will need to pay attention to when using this method.
 
-When fetching data in my FirebaseClient, instead of using a JSON decoder to decode a movie representation, I use JSON serialization to convert the data from Firebase to a dictionary of type `String: MovieDict`. Note that I used a typealias for clarity, and MovieDicts are themselves dictionaries of type `[String: Any]`.
+When fetching data in my FirebaseClient, instead of using a JSON decoder to decode a movie representation, I use JSON serialization to convert the data from Firebase to a dictionary of type `[String: MovieDict]`. Note that I used a typealias for clarity, and MovieDicts are themselves dictionaries of type `[String: Any]`.
 
 ```swift
 // Inside URLSession.shared.dataTask's completion closure
@@ -71,7 +71,7 @@ Since Firebase gives me back a dictionary as the top level object, I have to gra
 16}
 ```
 
-Let's break this code down to see what is happening.
+Let's break this code down to see what is happening:
 
 **Line 2:** Since this function is running on the background queue from URLSession, I need to make sure I do my work on a background managed object context.
 
@@ -79,13 +79,13 @@ Let's break this code down to see what is happening.
 
 **Line 6:** Since we are on a background queue, we can safely use `performAndWait` without blocking the main queue. In this case, I am choosing to use `performAndWait` over using `perform`, as I will be calling my table view controller on completion to let it know that the syncing is complete.
 
-**Line 7:** We now create an NSBatchInsertRequest, passing in the type of entity we are inserting, and an array of objects, which have to be of type `[String: Any]`. Each of these dictionaries correspond to an entity's attributes, which are the keys, and their values. Be sure that the String keys are exactly the same as the ones in Core Data. However, if a key is missing, you can use default values in Core Data to fill a value for that attribute.
+**Line 7:** We now create an `NSBatchInsertRequest`, passing in the type of entity we are inserting, and an array of objects, which have to be of type `[String: Any]`. Each of these dictionaries correspond to an entity's attributes, which are the keys, and their values. Be sure that the String keys are exactly the same as the ones in Core Data. However, if a key is missing, you can use default values in Core Data to fill a value for that attribute.
 
 **Line 8:** We need to set the result type of the request before executing it, in order to be able to pass the changes to our managed object context.
 
 **Line 9:** We then try to execute the batch insert, and try to cast the result to a `NSBatchInsertResult`.
 
-**Line 13:** If the result contains any object ID's we then merge those back into the main context. Note that if you are using a fetched results controller, as I was in this app, you will need re-fetch and reload your table view, as the fetched results controller won't be aware of the changes made to your model.
+**Line 13:** If the result contains any object IDs we then merge those changes back into the main context. Note that if you are using a fetched results controller, as I was in this app, you will need re-fetch and reload your table view, as the fetched results controller won't be aware of the changes made to your model.
 
 
 
