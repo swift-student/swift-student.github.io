@@ -10,7 +10,7 @@ typora-root-url: ../../swift-student.github.io
 
 As part of our week long delve into Core Data at Lambda School, we practiced syncing APIs with Core Data by fetching the data from the server and using Codable to produce representations which we then used to either update or insert objects into Core Data. This technique works great, however it involves loading objects into memory, which is not necessarily a problem when dealing with a small data set, but can become an issue when dealing with larger data sets. 
 
-There are a couple of ways to deal with this issue, including batching as demonstrated by [Apple's example code here](https://developer.apple.com/documentation/coredata/loading_and_displaying_a_large_data_feed), or using a third party library such as [FastEasyMapping](https://github.com/Yalantis/FastEasyMapping). However, with iOS13, Apple introduced NSBatchInsertRequest, which operates at the SQL level and doesn't load objects into memory, and is faster than other methods. It does come with some caveats though: 
+There are a couple of ways to deal with this issue, including batching as demonstrated by [Apple's example code here](https://developer.apple.com/documentation/coredata/loading_and_displaying_a_large_data_feed), or using a third party library such as [FastEasyMapping](https://github.com/Yalantis/FastEasyMapping). However, with iOS13, Apple introduced NSBatchInsertRequest which operates at the SQL level and doesn't load objects into memory, and is faster than other methods. It does come with some caveats though: 
 
 - It doesn't update or insert relationships
 
