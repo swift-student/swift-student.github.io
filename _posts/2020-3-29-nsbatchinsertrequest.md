@@ -40,7 +40,7 @@ When fetching data in my FirebaseClient, instead of using a JSON decoder to deco
 // Inside URLSession.shared.dataTask's completion closure
 do {
     guard let movieDictsByID = try JSONSerialization.jsonObject(with: data) as? [String: MovieDict] else {
-        throw NSError(domain: "Unable to cast JSON object to [String: MovieDict}", code: 2)
+        throw NSError(domain: "Unable to cast JSON object to [String: MovieDict]", code: 2)
     }
     let movieDicts: [MovieDict] = Array(movieDictsByID.values)
     completion(.success(movieDicts))
