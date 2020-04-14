@@ -244,7 +244,7 @@ One thing that isn't well suited to the Result type is if you don't particularly
 func dataTask(with request: URLRequest, errorHandler: @escaping (NetworkError?) -> Void) -> URLSessionDataTask {
     
     return self.dataTask(with: request) { (data, response, error) in
-        completionHandler(NetworkError(data: data, response: response, error: error))
+        errorHandler(NetworkError(data: data, response: response, error: error))
     }
 }
 ```
