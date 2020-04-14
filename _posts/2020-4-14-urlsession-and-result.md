@@ -273,4 +273,4 @@ func putAlbum(_ album: Album, completion: @escaping (NetworkError?) -> Void) {
 
 ## Conclusion
 
-I hope this article gives you some ideas as to how you can incorporate the Result type into your networking code. Also, if there is some functionality that you wish that Apple's frameworks had, why not try adding it yourself through extensions? They are such a powerful tool, that can lead to clean, easy to read code.
+I hope this article gives you some ideas as to how you can incorporate the Result type into your networking code. Also, if there is some functionality that you wish that Apple's frameworks had, why not try adding it yourself through extensions? They are such a powerful tool that can lead to clean, easy to read code.
