@@ -26,7 +26,7 @@ func printIntroduction() {
 }
 ```
 
-This works fine, however I found a couple issues with this method as I went along. First if you have many optionals to unwrap before doing a task, your coded can become deeply nested, which can be a bit hard on the eyes to follow sometimes. Now, it may seem obvious to those of you who know, but I didn't realize for a long time that you could unwrap multiple optionals by simply linking them with a comma like this:
+This works fine, however I found a couple issues with this method as I went along. First if you have many optionals to unwrap before doing a task, your code can become deeply nested, which can be a bit hard on the eyes to follow sometimes. Now, it may seem obvious to those of you who know, but I didn't realize for a long time that you could unwrap multiple optionals by simply linking them with a comma like this:
 
 ``` swift
 func printIntroduction() {
