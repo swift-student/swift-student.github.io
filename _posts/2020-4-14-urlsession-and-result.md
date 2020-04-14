@@ -10,7 +10,7 @@ typora-root-url: ../../swift-student.github.io
 
 ---
 
-Recently, I was reading a [Paul Hudson article on the Swift Result type](https://www.hackingwithswift.com/articles/161/how-to-use-result-in-swift), which was introduced in Swift 5.0. In this article, he mentioned that Apple's frameworks hadn't yet adopted Result into their own frameworks. This lead me to think, why not write an extension on URLSession to make a data task return `Result<Data, Error>` instead of `Data?, URLResponse?, Error?`.  So that's what I set about to do this weekend.
+Recently, I was reading a [Paul Hudson article on the Swift Result type](https://www.hackingwithswift.com/articles/161/how-to-use-result-in-swift), which was introduced in Swift 5.0. In this article, he mentioned that Apple hadn't yet adopted Result into their own frameworks. This lead me to think, why not write an extension on URLSession to make a data task return `Result<Data, Error>` instead of `Data?, URLResponse?, Error?`.  So that's what I set about to do this past weekend.
 
 ## Error Handling
 
