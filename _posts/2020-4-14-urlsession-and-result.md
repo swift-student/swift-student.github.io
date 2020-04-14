@@ -207,7 +207,7 @@ func getAlbums(completion: @escaping (Result<[Album], NetworkError>) -> Void) {
 
 
 
-I can use the ResultDecoder for images as well by making an image decoder like so:
+I can use the it for images as well by making an image decoder like so:
 
 ```swift
 private let imageDecoder = ResultDecoder<UIImage> { data in
