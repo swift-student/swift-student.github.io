@@ -147,7 +147,7 @@ extension URLSession {
 
 Now we can use this new data task method in our network client. However, before we do, I want to simplify the decoding of the result that I get back. I will need something that can take the `Result<Data, NetworkError>` and convert it to a `Result<T, NetworkError>`, where `T` is the type of model that we want to return. 
 
-This process isn't always a one-step JSONDecoder thing though, so it's not that easy to generalize with generics. As you can see in the example code above, my `getAlbums` method passes an array of `Album` to the completion closure, but first I need to decode  a dictionary of `[String: Album]` and then grab only the values from that dictionary. There are many times when decoding JSON where you must "peel back the onion skin" to get the values you are really interested in.
+This process isn't always a one step JSONDecoder thing though, so it's not that easy to generalize with generics. As you can see in the example code above, my `getAlbums` method passes an array of `Album` to the completion closure, but first I need to decode  a dictionary of `[String: Album]` and then grab only the values from that dictionary. There are many times when decoding JSON where you must "peel back the onion skin" to get the values you are really interested in.
 
 To solve this issue, I ended up defining a struct called `ResultDecoder`. This struct has one method that uses a throwing block passed in on initialization to transform the result into the desired type. Some of this code may seem foreign on first glance, but I will do my best to explain what is going on. 
 
