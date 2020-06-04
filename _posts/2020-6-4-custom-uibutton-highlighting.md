@@ -35,7 +35,7 @@ class HighlightButton: UIButton {
 
 Notice that I also marked this subclass `@IBDesignable` and made these properties `@IBInspectable`. This is handy for working with storyboards and allows us to see what our button will look like in real time. 
 
-Since the button I was trying to emulate also has rounded corners, I decided to add a `cornerRadius` property. As a shortcut for making a pill shape, I decided to set the corner radius to half of the frame's height if the radius was set to anything less than 0:
+Since the button I was trying to emulate also has rounded corners, I decided to add a `cornerRadius` property. As a shortcut for making a pill shape, I decided to set the layer's corner radius to half of the frame's height if this property was set to anything less than 0:
 
 ``` swift
 @IBInspectable var cornerRadius: CGFloat = 0 {
