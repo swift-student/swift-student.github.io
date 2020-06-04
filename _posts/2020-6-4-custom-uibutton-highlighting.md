@@ -71,7 +71,7 @@ func unHighlight() {
 }
 ```
 
-To make animating the background simple, I added a property for the animation durations:
+To make animating the background simple, I added a property for the animation duration:
 
 ``` swift
 var highlightDuration: TimeInterval = 0.25
@@ -134,7 +134,7 @@ class ToggleButton: HighlightButton {
 
 So to start with I've got inspectable properties for the scale and both images, and some durations that I've set up to be similar to Apple's animation.
 
-Then I override `highlight()` and `unHighlight()` to add a scaling animation, toggle isSelected (eliminating the need to do this in my code elsewhere), and swap the images.
+Then I override `highlight()` and `unHighlight()` to add a scaling animation, toggle isSelected (eliminating the need to do this in my code elsewhere), and swap the images:
 
 ``` swift
 override func highlight() {
@@ -187,3 +187,4 @@ And finally in action:
 
 ------
 
+I hope this inspires you to create some custom buttons of your own with different animations! If you do, let me know, I would love to see them :D
