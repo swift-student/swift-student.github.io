@@ -17,7 +17,7 @@ I've read that once you understand what monads are, you somehow lose the ability
 
 A monad is a type that wraps a value. So for instance, instead of declaring a function that returns an `Int`, you could instead return a `Monad<Int>`. Monads allow you to abstract away some additional logic that is ancillary to transformations you apply to wrapped values. Monads let you handle the side effects of transforming values, such as the possibility of not being able to produce a return value. If all this sounds a little like an `Optional` in Swift, your hunch would be correct as optionals are the most prolific monad in Swift! Some other examples of monads in Swift are `Result`, `Array`, and `Set`. However, these types qualify as monads only because of how they're implemented, which brings us to the requirements of monads.
 
-### Monad Requirements
+### Monad requirements
 
 **1: pure** - A function that takes a value and wraps it in a monad
 
@@ -124,7 +124,7 @@ Although we end up needing to nest two calls to `flatMap` in order to unwrap bot
 
 As soon as `none` (nil) is returned from a transformation, the logic short circuits and takes the nil path to the end. Only a seamless chain of `some` values will output a non-nil value. This is sometimes referred to as "Railway Oriented Programming", a term coined by Scott Wlaschin, author of *F# for Fun and Profit*. You can find Scott's [original article on this topic here](https://fsharpforfunandprofit.com/rop/).
 
-## Getting Results
+## Getting results
 
 The beauty of using `flatMap` like this is that we aren't limited to using it just with optionals. While Swift gives us plenty of tools like guard-let, if-let, optional chaining and nil-coalescing to deal with optionals, those are all specialized language features that _only_ work with optionals. What if instead of just returning an optional Int, we wanted to return a `Result` so that we could let a user know what the error was? We could define an error and update `safeDiv` to return a result with either an integer or an error:
 
@@ -161,7 +161,7 @@ Taking a look at the diagram from above modified to show `Result`s, we again see
 ![Result monad diagram](./result-monad.svg)
 
 
-## The Write Stuff
+## The write stuff
 
 Monads are not limited to enum types that only have two cases. We can explore another type of monad known as the *writer monad*. To do this we will create a new struct-based monad that wraps a value to add logging capability:
 
